@@ -1,0 +1,52 @@
+import 'package:flutter/material.dart';
+
+import './categories_screen.dart';
+import './favorite_scree.dart';
+
+class TabsScreen extends StatefulWidget {
+  @override
+  _TabsScreenState createState() => _TabsScreenState();
+}
+
+class _TabsScreenState extends State<TabsScreen> {
+  var _pages = [
+    {"page": CategoriesScreen(), "title": "Categories"},
+    {"page": FavoriteScreen(), "title": "Your Favorites"},
+  ];
+  int _selectedPageIndex = 0;
+
+  void _selectPage(int index) {
+    if (index == _selectedPageIndex) return;
+
+    setState(() {
+      _selectedPageIndex = index;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text((_pages[_selectedPageIndex]["title"]) as String),
+      ),
+      body: _pages[_selectedPageIndex]["page"] as Widget,
+      bottomNavigationBar: BottomNavigationBar(
+        onTap: _selectPage,
+        unselectedItemColor: Colors.white,
+        selectedItemColor: Theme.of(context).accentColor,
+        backgroundColor: Theme.of(context).primaryColor,
+        currentIndex: _selectedPageIndex,
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.category),
+            label: "Categories",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.star),
+            label: "Favorite",
+          ),
+        ],
+      ),
+    );
+  }
+}
