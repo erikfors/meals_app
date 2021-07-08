@@ -1,16 +1,24 @@
-# meals_app
+# Meals App
 
-A new Flutter project.
+An app where you can have your favorite receipes, and you can access the receips.
 
-## Getting Started
+## Info
 
-This project is a starting point for a Flutter application.
+This project is build with flutter...
 
-A few resources to get you started if this is your first Flutter project:
+In this project you are able to see different categories of meals, and in each categories there is different receips for the meals.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+- You can browse through all meal categories
+- You can select a category and see all meals that belong to that category
+- You can open a detail view of the meals
+- You can favorite and un-favorite any meal
+- You have a screen to see your favorite meals
+- You can set filters to filter different kinds of meals
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Video Walkthrough
+
+Here's a walkthrough of implemented user stories:
+
+<img src='app_walkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+GIF created with [LiceCap](http://www.cockos.com/licecap/). 
